@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 //*** Database context dependency injection ****//
 var server = "courseproject.database";
 var port = "1433";
-var database = "courseplatform";
+var database = "courseproject";
 var user = "sa";
 var password = "KWkW01UnvsJIvxraxUp2";
 
