@@ -19,6 +19,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString).UseSnakeCaseNamingConvention());
 /*builder.Services.AddDbContext<CustomerDbContext>(opt => opt.UseSqlServer(connectionString));*/
 
+/* Redis */
+builder.Services.AddStackExchangeRedisCache(options =>
+    options.Configuration = builder.Configuration.GetConnectionString("Cache"));
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
